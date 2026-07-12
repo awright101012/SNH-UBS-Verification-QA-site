@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Verification QA Harness — Executive Brief</title>
+<title>AI-Led Verification QA — Executive Brief</title>
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -436,44 +436,41 @@ figcaption {
   <div class="hero breakout">
     <div style="width:min(44rem, 100%); margin-inline:auto;">
       <p class="kicker">Executive brief<span class="sep">·</span>July 2026<span class="sep">·</span>7 min</p>
-      <h1>QA catches the mistake. The process still loses eight days.</h1>
-      <p class="dek">I built an agent to move the same check earlier — before the queues, handoffs, and re-review begin. It reads the record, checks the handbook, and shows the evidence behind every answer. The AI gives an answer. The system makes it prove it. People handle the hard calls.</p>
-      <p class="byline"><strong>The scale</strong>&nbsp; about a third of a million verifications in six months &nbsp;·&nbsp; <strong>The cost</strong>&nbsp; roughly eight days from QA return to approval &nbsp;·&nbsp; <strong>The status</strong>&nbsp; built, tested, and entering reviewer feedback</p>
+      <h1>The last manual step in Verifications is QA. I built an AI agent to automate it.</h1>
+      <p class="dek">Nearly every finished education and employment verification still ends with a person reconstructing the case, applying the handbook, and deciding whether it is ready to ship. I built an AI agent to move that same pass earlier. It investigates the record, reasons from the same handbook, and shows the evidence behind its answer. The harness verifies every claim; reviewers keep every uncertain case.</p>
+      <p class="byline"><strong>The destination</strong>&nbsp; universal human review to AI-led QA &nbsp;·&nbsp; <strong>The measured cost</strong>&nbsp; a caught mistake can still add roughly eight days &nbsp;·&nbsp; <strong>The next gate</strong>&nbsp; reviewer feedback</p>
     </div>
   </div>
 
-  <p class="section-kicker">The cost of catching it late</p>
-  <h2>The error is caught. The delay comes after.</h2>
+  <p class="section-kicker">The operating problem</p>
+  <h2>Automation can finish the search. It cannot certify its own answer.</h2>
 
-  <p>QA reviewers react quickly. Rework usually begins within an hour of a return. But the record then moves through queues, handoffs, corrections, and another review. By the time it returns to approval, roughly eight days have passed.</p>
+  <p>Technology is steadily taking repetitive work out of intake, research, outreach, and fulfillment. That is real progress: routine work moves faster and people can concentrate on exceptions.</p>
 
-  <p>The agent does not make that loop faster. It is built to stop the loop from starting. In the first half of 2026, about 2% of finished verifications returned with a coded error — a floor, not a census — and about 86% of coded return reasons fell into four procedural categories: routing, discrepancy classification, incomplete fields, and note handling. Those are rule-shaped mistakes a machine can check when the draft is created.</p>
+  <p>But automation still hands nearly every finished search to QA. The final human check touches 95% of searches. A reviewer reconstructs the case, compares what was provided with what was verified, applies the handbook, and decides whether the answer is ready to ship.</p>
 
+  <p>When QA finds a mistake, reviewers react quickly. The delay comes afterward, as the record crosses queues, corrections, and another review. A caught mistake starts a multi-day return loop.</p>
 
+  <p>Most coded return reasons fall into a handful of procedural categories: routing, discrepancy classification, incomplete fields, and note handling. These are repeatable, rule-shaped mistakes being caught after the work is complete.</p>
 
-  <div class="tk"><p class="tk-k">WHAT I WON'T CLAIM</p><p>Those are <strong>elapsed</strong> times, not effort — nothing in this data measures the minutes a reviewer actually spends on a case, so I make no labor-savings claim until activity logs exist to prove one. What is measured is the calendar cost of the return loop; the harness attacks that cost by construction, and the same script that produced this baseline will count the detours it deletes.</p></div>
+  <p>The shared problem is timing and memory. The check happens after completion, and each ruling closes one case instead of becoming a reusable answer for the next one.</p>
 
-  <p class="section-kicker">Why now</p>
-  <h2>Every wave of automation sends more work to the checker</h2>
+  <p><strong>The opportunity is not to make reviewers read faster. It is to move the check earlier and let the operation remember what reviewers have already settled.</strong></p>
 
-  <p>QA already touches 95% of searches. As fulfillment becomes more automated, the final check does not disappear — it becomes a larger share of the work people still do.</p>
+  <p class="section-kicker">The response</p>
+  <h2>What we built: an AI reviewer that can investigate</h2>
 
-  <p><strong>That makes QA the next constraint, and the place where this agent matters.</strong></p>
+  <p>The agent runs the same narrow pass a reviewer runs on completed education and employment verifications. It must choose one of three answers: the record is correct, it needs a fix, or a person needs to look.</p>
 
-  <p class="section-kicker">The fix</p>
-  <h2>So I moved the check earlier</h2>
+  <p>This is not a classifier glancing at one row. The AI can investigate. It can pull the timeline, inspect the evidence, compare provided and verified facts, look up code meanings, consult the handbook, and explain why its answer follows. Every lookup leaves a receipt.</p>
 
-  <p>The agent reviews each completed education and employment verification before it enters the return loop. It has three possible answers: this is correct, this needs a fix, or a person needs to look.</p>
+  <p>The handbook has been turned into rules the system can apply and cite. A citation to a rule that does not exist is an automatic stop. Historical QA decisions became the benchmark and the beginning of a precedent ledger, so the agent is tested against how the operation actually handled real cases — not against invented examples.</p>
 
-  <p>It can inspect the timeline, check the evidence, and consult the handbook. Every answer must show its work. If the evidence is missing, the rules do not support the answer, or the case genuinely requires judgment, it goes to a reviewer.</p>
-
-  <p>It learned the job from the operation's own record. The QA handbook was codified into machine-enforceable rules — the agent must cite them on every draft, and a citation to a rule that doesn't exist is an automatic block, not a deduction. A year of historical QA decisions became its benchmark and its first precedents: every score in this brief is the agent measured against what human reviewers actually did on real cases.</p>
-
-  <p>Three stations, one way through:</p>
+  <p><strong>The record shows. The AI investigates. The harness verifies and routes. Reviewers decide and apply. Confirmed rulings teach the system.</strong></p>
 
   <figure class="breakout">
     <div class="frame scrollwrap">
-      <svg viewBox="0 0 1080 250" width="1080" height="250" role="img" aria-label="Three stations: prepare, where identity is stripped and rules attached; draft, where the AI fills a locked form; check and route, where every claim is re-verified. The case then exits through one of three doors: accepted and done, review by a person, or blocked and sent to a person.">
+      <svg viewBox="0 0 1080 250" width="1080" height="250" role="img" aria-label="Three stations: build the case from safe facts, evidence, and handbook rules; investigate and draft, where the AI asks questions, compares facts, reasons, and explains; prove and route, where the harness independently verifies every claim. The case then exits as ready, human review, or blocked to a person.">
         <defs>
           <marker id="arrK" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" class="mk-ink" stroke-width="1.2"/>
@@ -481,91 +478,68 @@ figcaption {
         </defs>
         <rect x="20" y="70" width="250" height="90" rx="5" class="bx-tint"/>
         <text class="t-big" x="38" y="98">1</text>
-        <text class="t-label" x="38" y="120">PREPARE</text>
-        <text class="t-sub" x="38" y="140">identity stripped · rules attached</text>
-        <text class="t-note2" x="38" y="186">names, notes and IDs never</text>
-        <text class="t-note2" x="38" y="200">get past this station</text>
+        <text class="t-label" x="38" y="120">BUILD THE CASE</text>
+        <text class="t-sub" x="38" y="140">safe facts · evidence · handbook</text>
+        <text class="t-note2" x="38" y="186">the record becomes a clean</text>
+        <text class="t-note2" x="38" y="200">case the AI can investigate</text>
 
         <line class="ln" x1="270" y1="115" x2="316" y2="115" marker-end="url(#arrK)"/>
 
         <rect x="320" y="70" width="250" height="90" rx="5" class="bx-dash"/>
         <text class="t-big" x="338" y="98">2</text>
-        <text class="t-label" x="338" y="120">DRAFT</text>
-        <text class="t-sub" x="338" y="140">the AI fills a locked form</text>
-        <text class="t-note2" x="338" y="186">three legal answers · must cite</text>
-        <text class="t-note2" x="338" y="200">its sources · may say "unsure"</text>
+        <text class="t-label" x="338" y="120">INVESTIGATE &amp; DRAFT</text>
+        <text class="t-sub" x="338" y="140">the AI asks · compares · reasons</text>
+        <text class="t-note2" x="338" y="186">one of three answers · every</text>
+        <text class="t-note2" x="338" y="200">claim tied to rule and evidence</text>
 
         <line class="ln" x1="570" y1="115" x2="616" y2="115" marker-end="url(#arrK)"/>
 
         <rect x="620" y="70" width="250" height="90" rx="5" class="bx-tint"/>
         <text class="t-big" x="638" y="98">3</text>
-        <text class="t-label" x="638" y="120">CHECK &amp; ROUTE</text>
-        <text class="t-sub" x="638" y="140">every claim re-verified by code</text>
-        <text class="t-note2" x="638" y="186">the AI's word is never</text>
-        <text class="t-note2" x="638" y="200">taken for anything</text>
+        <text class="t-label" x="638" y="120">PROVE &amp; ROUTE</text>
+        <text class="t-sub" x="638" y="140">the harness rebuilds every claim</text>
+        <text class="t-note2" x="638" y="186">citations · evidence · privacy</text>
+        <text class="t-note2" x="638" y="200">codes · confidence · route</text>
 
         <polyline class="ln" points="870,115 894,115 894,85 916,85" marker-end="url(#arrK)"/>
         <polyline class="ln" points="894,115 916,115" marker-end="url(#arrK)"/>
         <polyline class="ln" points="894,115 894,145 916,145" marker-end="url(#arrK)"/>
         <rect x="920" y="72" width="140" height="26" rx="13" class="bx-ok"/>
-        <text class="t-sub t-ok" x="934" y="89" style="font-weight:500;">ACCEPTED — verified</text>
+        <text class="t-sub t-ok" x="934" y="89" style="font-weight:500;">READY — all checks pass</text>
         <rect x="920" y="102" width="140" height="26" rx="13" class="bx-warn"/>
         <text class="t-sub t-warn" x="934" y="119" style="font-weight:500;">REVIEW — a person</text>
         <rect x="920" y="132" width="140" height="26" rx="13" class="bx-block"/>
         <text class="t-sub t-block" x="934" y="149" style="font-weight:500;">BLOCKED — a person</text>
       </svg>
     </div>
-    <figcaption>The case is prepared, drafted, checked, and routed. Even an accepted repair is applied by a reviewer; the system prepares the answer and proves it, but does not push the button.</figcaption>
+    <figcaption>One agent, two kinds of intelligence. The AI handles the messy reasoning. The harness turns that reasoning into an answer the operation can inspect, verify, and safely route.</figcaption>
   </figure>
 
 
 
-  <p class="section-kicker">Under the hood</p>
-  <h2>What is actually under the hood?</h2>
+  <p class="section-kicker">The control handoff</p>
+  <h2>The harness makes AI reasoning operationally trustworthy</h2>
 
-  <p>The agent is a small language model surrounded by rules, evidence checks, and hard stops. The model reasons across a messy case; the harness decides whether its answer may survive.</p>
+  <p>The AI handles the part that resists ordinary automation: dates that almost match, titles that may mean the same thing, incomplete evidence, and several handbook rules interacting at once. It can ask questions, connect facts across the record, and explain the judgment it reached.</p>
 
-  <p>Before the model sees a case, names, free-text notes, and identifiers are stripped, hashed, or reduced to flags. The model then returns one of three answers on a locked form. Every citation, evidence claim, confidence score, and actionable code is rechecked before the case can leave.</p>
+  <p>The harness handles what must never vary. It knows which evidence is allowed, whether a citation is real, whether a proposed code exists, whether required facts are missing, and which routes are permitted. Before the model sees a case, names, free-text notes, and identifiers are stripped, hashed, or reduced to safe flags. After the model answers, the harness independently rebuilds every claim.</p>
 
-  <p><strong>It drafts. The harness checks. Anything uncertain stops with a person.</strong></p>
+  <p>The AI is not reduced to a text generator. It is given room to investigate and reason. The harness gives that reasoning a safe path into the operation. A model alone can produce a persuasive answer; this combination produces an answer that can survive inspection.</p>
 
-  <p class="section-kicker">The safety architecture</p>
-  <h2>More ways to say no than yes</h2>
+  <p>The system recognizes ten routes, and seven are refusals. Only a fully supported answer can pass. When a check fails, the proposed action is removed and the case is rewritten for human review. <strong>The AI can be wrong. It cannot be silently wrong.</strong></p>
 
-  <figure class="breakout">
-    <div class="frame scrollwrap">
-      <svg viewBox="0 0 920 160" width="920" height="160" role="img" aria-label="Ten segments representing the ten possible outcomes of a case: two green accepts, one amber human review, and seven red blocks.">
-        <rect x="20" y="30" width="80" height="40" rx="3" class="bx-ok"/>
-        <rect x="108" y="30" width="80" height="40" rx="3" class="bx-ok"/>
-        <rect x="196" y="30" width="80" height="40" rx="3" class="bx-warn"/>
-        <rect x="284" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="372" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="460" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="548" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="636" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="724" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <rect x="812" y="30" width="80" height="40" rx="3" class="bx-block"/>
-        <line class="ln-soft" x1="108" y1="82" x2="108" y2="96"/>
-        <text class="t-sub t-ok" x="108" y="112" text-anchor="middle" style="font-weight:500;">accept — 2</text>
-        <text class="t-sub" x="108" y="128" text-anchor="middle">only after every check passes</text>
-        <line class="ln-soft" x1="236" y1="82" x2="236" y2="96"/>
-        <text class="t-sub t-warn" x="236" y="112" text-anchor="middle" style="font-weight:500;">review — 1</text>
-        <line class="ln-soft" x1="588" y1="82" x2="588" y2="96"/>
-        <text class="t-sub t-block" x="588" y="112" text-anchor="middle" style="font-weight:500;">blocked — 7</text>
-        <text class="t-sub" x="588" y="128" text-anchor="middle">a separate trip-wire for each way an AI draft can go wrong</text>
-      </svg>
-    </div>
-    <figcaption>A case leaves the system stamped with one of exactly ten outcomes. Seven of the ten are refusals — one each for leaked personal data, malformed output, invented citations, unsupported repair claims, invented code meanings, low confidence, and missing evidence. A blocked draft is stripped of anything executable before it's re-routed to a person.</figcaption>
-  </figure>
+  <div class="tk"><p class="tk-k">WHAT THE HARNESS PROVED</p><p>Six independent checks ran on every benchmark case, and <strong>zero unsupported commitments escaped them</strong>. Every answer must earn its route.</p></div>
 
-  <p>The model can suggest an answer. It cannot quietly approve one. The design rule underneath fits in one line: <strong>when anything doesn't add up, the case goes to a person — and no other path exists.</strong> Every failure, ambiguity, or malfunction inside the system collapses to its safest state — a human review — the way an elevator brake clamps when power is cut. Not because a policy says so, but because the software has no other exit. The AI can be wrong; it cannot be <em>silently</em> wrong.</p>
+  <p class="section-kicker">The proof</p>
+  <h2>Three findings changed the case for AI-led QA</h2>
 
-  <div class="tk"><p class="tk-k">TAKEAWAY</p><p>Six independent checks ran on every benchmark case — and <strong>zero unsupported commitments escaped them</strong>. The promise is not “trust the AI.” It is “make every answer prove itself.”</p></div>
+  <p><strong>The delay lives after the review.</strong> Rework usually begins within an hour of a return, but approval comes back roughly eight days later. Moving the check earlier attacks the round trip, not the reviewer.</p>
 
-  <p class="section-kicker">The scoreboard</p>
-  <h2>Where it stands today</h2>
+  <div class="tk"><p class="tk-k">WHAT THE DATA MEASURES</p><p>The eight days are <strong>elapsed time</strong>, not hands-on effort. The evidence proves the calendar cost of the return loop; it does not yet support a labor-savings claim. Reviewer activity logs will measure that separately.</p></div>
 
-  <p>The head-to-head that matters: on just over two thousand historical cases, did the AI predict the reviewer's action better than a deliberately simple fixed rule?</p>
+  <p><strong>Most coded mistakes look like rules.</strong> About 2% of finished verifications returned with a coded error in the first half of 2026 — a floor, not a census — and about 86% of coded return reasons fell into four procedural categories. That makes earlier, repeatable checking a credible target.</p>
+
+  <p><strong>Better evidence mattered more than another clever prompt.</strong> The benchmark asks whether the AI can reproduce the action a reviewer took better than a deliberately simple fixed rule. The full benchmark ended in a statistical tie. When the agent received richer but still anonymous case facts, it produced a small early lead.</p>
 
   <figure class="breakout">
     <div class="frame scrollwrap">
@@ -603,33 +577,32 @@ figcaption {
     <figcaption>On the full benchmark, the AI and the fixed rule tied at about 54% — the whiskers show sampling noise, and the bars overlap completely. With richer but still anonymous evidence, the comparison moved to about 59% versus 56%: an early signal, still within the uncertainty of this dataset. "Safe value pairs" means job titles, degrees and dates — never names, contacts or identifiers; exact figures live in the deep-dive appendix.</figcaption>
   </figure>
 
-  <p>On a side-by-side test, the local and hosted versions gave the same answer on every case. That makes local experimentation useful and inexpensive, with the final candidate checked again in the hosted lane.</p>
+  <p>The result points to context, not prompting, as the next source of improvement. A reviewer also reasons from the whole case — not from a single row.</p>
 
-  <div class="tk"><p class="tk-k">TAKEAWAY</p><p>The full benchmark was a tie. Richer safe evidence created a small early lead; better evidence mattered more than another clever prompt.</p></div>
+  <div class="tk"><p class="tk-k">WHAT EXISTS NOW</p><p>The codified handbook, investigative tools, privacy boundary, locked answer form, independent verifier, audit trail, precedent ledger, replay benchmark, and sealed blind test are built. This is no longer an idea waiting for an architecture. It is an agent entering reviewer feedback.</p></div>
 
-  <p>The rules, audit trail, benchmark, and sealed blind test now exist. That is enough to move from demonstration to reviewer feedback. The next evidence comes from the first cases reviewed by the people who know the work.</p>
+  <p class="section-kicker">The learning operation</p>
+  <h2>Every hard call becomes an answer the system can remember</h2>
 
-
-  <p class="section-kicker">The learning loop</p>
-  <h2>It learns as it goes</h2>
+  <p>Most AI systems improve by asking the model to do more. This one improves by turning settled judgment into reusable precedent.</p>
 
   <figure class="breakout">
     <div class="frame scrollwrap">
-      <svg viewBox="0 0 560 330" width="560" height="330" role="img" aria-label="A three-node cycle: the AI drafts the leftover hard cases; people rule on what's uncertain; confirmed rulings become precedent handled by code. Each loop shrinks the share of cases that need the AI.">
+      <svg viewBox="0 0 560 330" width="560" height="330" role="img" aria-label="A three-node cycle: the AI investigates unfamiliar cases; people rule on what is uncertain; code remembers each confirmed answer. Every loop leaves fewer repeat questions for the AI and for people.">
         <defs>
           <marker id="arrL" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" class="mk-acc" stroke-width="1.2"/>
           </marker>
         </defs>
         <rect x="170" y="24" width="220" height="56" rx="6" class="bx-dash"/>
-        <text class="t-label" x="280" y="48" text-anchor="middle">AI DRAFTS</text>
-        <text class="t-sub" x="280" y="66" text-anchor="middle">the leftover hard cases</text>
+        <text class="t-label" x="280" y="48" text-anchor="middle">AI INVESTIGATES</text>
+        <text class="t-sub" x="280" y="66" text-anchor="middle">the unfamiliar cases</text>
         <rect x="310" y="220" width="230" height="56" rx="6" class="bx-tint"/>
         <text class="t-label" x="425" y="244" text-anchor="middle">PEOPLE RULE</text>
         <text class="t-sub" x="425" y="262" text-anchor="middle">on everything uncertain</text>
         <rect x="20" y="220" width="230" height="56" rx="6" class="bx-tint"/>
-        <text class="t-label" x="135" y="244" text-anchor="middle">RULINGS BECOME LAW</text>
-        <text class="t-sub" x="135" y="262" text-anchor="middle">applied by code — free, forever</text>
+        <text class="t-label" x="135" y="244" text-anchor="middle">CODE REMEMBERS</text>
+        <text class="t-sub" x="135" y="262" text-anchor="middle">the confirmed answer</text>
         <path d="M 396 84 Q 460 130 442 214" fill="none" stroke="var(--accent)" stroke-width="1.4" marker-end="url(#arrL)"/>
         <text class="t-note2" x="452" y="140">checked &amp; routed</text>
         <path d="M 306 250 Q 280 268 254 250" fill="none" stroke="var(--accent)" stroke-width="1.4" marker-end="url(#arrL)"/>
@@ -638,28 +611,35 @@ figcaption {
         <text class="t-note2" x="30" y="130">fewer cases need AI</text>
       </svg>
     </div>
-    <figcaption>The learning loop. Reviewers settle the hard calls, rulings become precedent, and repeat cases move into code — the latest benchmark queued precedent candidates from roughly 3% of its cases.</figcaption>
+    <figcaption>Reviewers settle the hard calls. Confirmed rulings become precedent. The next matching case receives the same answer immediately, with no model improvisation — and every loop leaves fewer repeat questions for people.</figcaption>
   </figure>
 
-  <p>Today, a person still applies every correction. Over time, each confirmed ruling moves another repeat question into code, leaving reviewers with the cases that are genuinely new.</p>
+  <p>The latest benchmark surfaced precedent candidates from roughly 3% of its cases. Reviewer confirmation turns those candidates into durable memory for the operation.</p>
 
-  <p>At the finish line, the agent checks every case, people review by risk, and senior reviewers own disputes and new precedent.</p>
+  <p class="section-kicker">The path forward</p>
+  <h2>The destination is AI-led QA. Reviewer evidence earns it.</h2>
 
-  <p><strong>The next step is simple: review the first cases and start turning confirmed rulings into reusable answers.</strong></p>
+  <div class="compare breakout"><div class="scrollwrap"><table>
+    <thead><tr><th>Built and tested</th><th>Next</th><th>Earned future</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Codified handbook, investigative tools, privacy boundary, locked answer, independent verifier, audit trail, replay benchmark, and sealed blind test.</td>
+        <td>Reviewer-controlled cases, corrections and overrides, confirmed precedents, and complete outcome measurement.</td>
+        <td>The agent checks every case; people review by risk; senior reviewers own disputes, calibration, and new precedent.</td>
+      </tr>
+    </tbody>
+  </table></div></div>
 
-  <p class="section-kicker">To remember</p>
-  <h2>If you keep three things</h2>
+  <p>This is how universal manual QA is replaced: not by discarding human judgment, but by reserving it for the cases that genuinely need it. Routine checks become continuous machine work. Senior reviewers own disputes, new precedent, and calibration. The operation gains both broader coverage and better memory.</p>
 
-  <ol class="takeaways breakout">
-    <li><div><strong>The AI gives an answer. The system makes it prove it. People handle the hard calls.</strong></div></li>
-    <li><div><strong>As more fulfillment automates, QA becomes the human constraint this agent is built to relieve.</strong></div></li>
-    <li><div><strong>Every confirmed ruling becomes precedent, so repeat questions move from AI into code.</strong></div></li>
-  </ol>
+  <p><strong>The decision now is whether to put the agent beside the QA team, keep every action under reviewer control, and measure which universal checks it can safely absorb.</strong></p>
+
+  <p>That is the bridge from universal manual review to AI-led QA — and the point where QA stops being where automation ends.</p>
 
 </article>
 
 <footer class="colophon">
-  <p>Internal briefing · 2026-07-03. Companion reading: the <a href="concepts.html">conceptual tour</a> (how the architecture works, room by room) and the <a href="deep-dive.html">implementation deep dive</a> (module names, schemas, and the source of every number cited here).</p>
+  <p>Internal briefing · 2026-07-11. Companion reading: the <a href="concepts.html">conceptual tour</a> (how the architecture works, room by room) and the <a href="deep-dive.html">implementation deep dive</a> (module names, schemas, and the source of every number cited here).</p>
   <p>All figures trace to repository records as of July 3, 2026; the operational baseline traces to analysis/qa_ops_metrics_20260707/. Operating-model figures — the automation curve, review-touch shares, review-tax and sampling envelopes, and the design targets for the finish line — trace to the Verifications Operating Model Final Report (2026-07-02) and its capacity model; modeled targets are labeled as modeled, measurement windows are labeled, and figures from different windows are never cross-divided. The learning-loop shares shown in diagrams are illustrations, not measurements. No applicant data appears in this document.</p>
   <p class="brandline"><b>SNH CAPITAL PARTNERS</b> · A Wright Original · Built by SNH Strategic Initiatives</p>
 </footer>
