@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>The Verification QA Harness</title>
+<title>The AI QA Worker</title>
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -13,7 +13,7 @@ img,svg{max-width:100%;height:auto}
 button,input,select{font:inherit}
 h1,h2,h3,h4,p,figure,blockquote,dl,dd,ul,ol{margin:0}
 a{color:inherit}
-:root{--paper:#F7F3EC;--paper2:#EFE8DB;--hairline:#DFD6C6;--ink:#2B241A;--warm:#6E6353;--accent:#436B8E;--accent-dim:#6B93B5;--accent-tint:#E4EDF4;
+:root{--paper:#FAF9F5;--paper2:#F0EEE6;--hairline:#E2DCCE;--ink:#141413;--warm:#6E6A5F;--accent:#436B8E;--accent-dim:#6B93B5;--accent-tint:#E4EDF4;
 --sans:"Avenir Next","Segoe UI",system-ui,sans-serif;--serif:"Palatino Linotype",Palatino,Georgia,serif}
 body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.6}
 .shell{max-width:840px;margin:0 auto;padding:0 28px}
@@ -23,32 +23,32 @@ body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-heig
 .masthead{padding:64px 0 12px}
 .eyebrow{font-family:var(--sans);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--accent)}
 h1{font-family:var(--sans);font-weight:600;font-size:clamp(2rem,5vw,3rem);line-height:1.12;letter-spacing:-.015em;margin-top:16px}
-.dek{margin-top:20px;font-size:1.1875rem;color:#4A4132;max-width:60ch}
-.packet{display:inline-block;margin-top:22px;font-family:var(--sans);font-size:.875rem;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);padding-bottom:2px}
-.packet:hover{color:var(--ink);border-color:var(--ink)}
+.dek{margin-top:20px;font-size:1.1875rem;color:#3E3A31;max-width:60ch}
 .cards{display:grid;gap:14px;margin:36px 0 0}
-.card{border:1px solid var(--hairline);border-left:3px solid var(--accent);border-radius:4px;background:#FCFAF4;padding:20px 24px}
+.card{border:1px solid var(--hairline);border-left:3px solid var(--accent);border-radius:4px;background:#FDFCFA;padding:20px 24px}
+.card .start{display:block;font-family:var(--sans);font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .card .t{display:block;font-family:var(--sans);font-weight:600;font-size:1.0625rem;color:var(--ink);text-decoration:none}
 .card .t:hover{color:var(--accent)}
 .card .d{display:block;font-family:var(--sans);font-size:.84375rem;color:var(--warm);margin-top:6px;line-height:1.55}
+.card .read{display:inline-block;font-family:var(--sans);font-size:.78125rem;color:var(--accent);margin-top:10px}
+.snh{font-family:var(--serif);font-weight:700;color:var(--accent);letter-spacing:.08em;border-bottom:1px solid var(--accent-dim)}
 .foot{border-top:1px solid var(--hairline);margin-top:72px;padding:30px 0 56px;font-family:var(--sans);font-size:.8125rem;color:var(--warm)}
 </style>
 </head>
 <body>
   <div class="shell">
-    <div class="topbar"><span class="wordmark">SNH-UBS <span class="dot">&middot;</span> Verification QA</span><span>A Wright Original &middot; Built by SNH Strategic Initiatives</span></div>
+    <div class="topbar"><span class="wordmark">UBS Verifications <span class="dot">&middot;</span> AI QA Worker</span><span>The harness series &middot; July 2026</span></div>
     <header class="masthead">
-      <div class="eyebrow">The harness series</div>
-      <h1>The Verification QA Harness</h1>
-      <p class="dek">Three views of one idea: let AI investigate the messy case, make every answer show its evidence, and send genuine judgment calls to people. Start with the executive brief, walk the system room by room, then inspect the engineering.</p>
-      <a class="packet" href="pdf/qa-harness-series.pdf">Download the complete series as a PDF</a>
+      <div class="eyebrow">SNH Strategic Initiatives</div>
+      <h1>The AI QA Worker</h1>
+      <p class="dek">Three views of one autonomous worker: the business case, one case moving through the machine, and the engineering that lets an AI decision become a safe, provable action.</p>
     </header>
     <nav class="cards">
-      <div class="card"><a class="t" href="exec-brief.html">The last manual step in Verifications now runs itself.</a><span class="d">How the AI QA worker investigates each case, decides approve or exact change, executes safely, proves the result, and learns from completed outcomes.</span></div>
-      <div class="card"><a class="t" href="concepts.html">A machine that knows when it doesn't know</a><span class="d">Follow one case through five rooms, then route a draft yourself in the interactive conceptual tour.</span></div>
-      <div class="card"><a class="t" href="deep-dive.html">The AI investigates. The harness makes the result trustworthy.</a><span class="d">How the AI investigates messy cases, the harness verifies its evidence, and confirmed rulings become precedent.</span></div>
+      <div class="card"><span class="start">Start here</span><a class="t" href="exec-brief.html">The AI QA Worker</a><span class="d">Why the last manual decision in Verifications can now become autonomous machine work—and how the harness makes that safe.</span><a class="read" href="exec-brief.html">Read HTML</a></div>
+      <div class="card"><span class="start">02</span><a class="t" href="concepts.html">One case through the AI QA worker</a><span class="d">Follow one employment verification from complete record to AI decision, independent proof, automatic action, and readback.</span><a class="read" href="concepts.html">Read HTML</a></div>
+      <div class="card"><span class="start">03</span><a class="t" href="deep-dive.html">How the AI QA worker earns the right to act</a><span class="d">The engineering behind bounded investigation, exact decisions, independent verification, zero-write containment, execution, readback, and learning.</span><a class="read" href="deep-dive.html">Read HTML</a></div>
     </nav>
-    <footer class="foot">SNH CAPITAL PARTNERS &middot; A Wright Original &middot; Built by SNH Strategic Initiatives &middot; No applicant data</footer>
+    <footer class="foot"><span class="snh">SNH</span> &nbsp; <i>A Wright Original</i> &middot; Built by <b>SNH Strategic Initiatives</b> &middot; No applicant data</footer>
   </div>
 </body>
 </html>
