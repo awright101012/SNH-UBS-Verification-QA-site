@@ -56,8 +56,9 @@ figure{max-width:880px;margin:52px auto}figcaption{font-family:var(--sans);font-
 .findings{max-width:880px;margin:38px auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;font-family:var(--sans)}.finding{border:1px solid var(--hairline);background:var(--panel);border-radius:4px;padding:20px 22px}.finding .k{font-size:.68rem;font-weight:700;color:var(--blue);letter-spacing:.11em;text-transform:uppercase}.finding h3{font-size:1rem;line-height:1.4;margin-top:7px}.finding p{font-size:.84rem;line-height:1.62;color:#3E3A31;margin-top:8px}
 .clock{display:grid;grid-template-columns:92px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--hairline);font-family:var(--sans)}.clock:last-child{border-bottom:1px solid var(--hairline)}.clock .label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}.clock .path{font-size:.88rem;line-height:1.55;color:#3E3A31}.clock .path b{color:var(--ink)}
 .note{background:var(--oat);border:1px solid var(--hairline);border-radius:4px;max-width:700px;margin:52px auto;padding:26px 28px}.note .kicker{font-family:var(--sans);font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);display:block;margin-bottom:10px}.note p{font-size:1.0313rem;line-height:1.68;margin:0}.note p+p{margin-top:.9em}
-footer.colophon{border-top:1px solid var(--hairline);margin-top:88px;padding:34px 0 60px;font-family:var(--sans);font-size:.8125rem;line-height:1.7;color:var(--warm)}footer.colophon p+p{margin-top:.8em}
-@media(max-width:720px){.statband,.findings,.duo{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:22px}.shell{padding:0 20px}.topbar{align-items:flex-start;flex-direction:column;gap:4px}.masthead{padding-top:44px}.clock{grid-template-columns:1fr;gap:5px}}
+.series-nav{max-width:880px;margin:76px auto 0;padding-top:28px;border-top:2px solid var(--ink);font-family:var(--sans)}.series-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px}.series-kicker{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}.series-home{font-size:.78rem;color:var(--blue);text-underline-offset:3px}.series-links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.series-link{display:block;border:1px solid var(--hairline);border-left:3px solid var(--blue);border-radius:4px;background:var(--panel);padding:18px 20px;color:var(--ink);text-decoration:none;transition:border-color .16s ease,background .16s ease}.series-link:hover{border-color:var(--blue);background:var(--blue-tint)}.series-link .number{display:block;font-family:var(--mono);font-size:.67rem;color:var(--blue);margin-bottom:6px}.series-link strong{display:block;font-size:.96rem;line-height:1.35}.series-link span:last-child{display:block;margin-top:6px;font-size:.78rem;line-height:1.55;color:var(--warm)}
+footer.colophon{margin-top:34px;padding:0 0 60px;font-family:var(--sans);font-size:.8125rem;line-height:1.7;color:var(--warm)}footer.colophon p+p{margin-top:.8em}
+@media(max-width:720px){.statband,.findings,.duo,.series-links{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:22px}.shell{padding:0 20px}.topbar{align-items:flex-start;flex-direction:column;gap:4px}.masthead{padding-top:44px}.clock{grid-template-columns:1fr;gap:5px}.series-head{align-items:flex-start;flex-direction:column;gap:6px}}
 @media print{body{font-size:11.5pt}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.masthead{animation:none;padding-top:20px}figure,.panel,.stat,.finding,.duo,.note{break-inside:avoid}h2{break-after:avoid}}
 </style>
 
@@ -149,7 +150,15 @@ footer.colophon{border-top:1px solid var(--hairline);margin-top:88px;padding:34p
 
   <aside class="note"><span class="kicker">Evidence boundary</span><p>The operating measurements describe education and employment verifications from the first half of 2026 and the prior human QA loop. The repository-owned worker has been built and tested for behavior, containment, and auditability. Live operation is still required to establish production accuracy and operational impact.</p><p>No applicant data appears in this briefing.</p></aside>
 
-  <footer class="colophon"><p><b>SNH Strategic Initiatives.</b> Executive briefing · July 2026.</p><p>The companion pieces explain one case from beginning to end and then open the engineering controls underneath it.</p></footer>
+  <nav class="series-nav" aria-label="Continue the AI QA Worker series">
+    <div class="series-head"><span class="series-kicker">Continue the series</span><a class="series-home" href="https://awright101012.github.io/SNH-UBS-Verification-QA-site/">View all three pieces</a></div>
+    <div class="series-links">
+      <a class="series-link" href="concepts.html"><span class="number">02 · Illustrated tour</span><strong>Follow one case through the worker</strong><span>See the AI investigate, decide, prove, act, and confirm.</span></a>
+      <a class="series-link" href="deep-dive.html"><span class="number">03 · Engineering deep dive</span><strong>Open the harness underneath it</strong><span>See how AI judgment becomes a controlled, provable action.</span></a>
+    </div>
+  </nav>
+
+  <footer class="colophon"><p><b>SNH Strategic Initiatives.</b> Executive briefing · July 2026.</p></footer>
 </div>
 
 </body>
