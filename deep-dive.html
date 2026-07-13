@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>How the AI QA Worker Earns the Right to Act — Engineering Deep Dive</title>
+<title>How the AI QA Worker Turns Judgment Into Verified Action — Engineering Deep Dive</title>
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -40,45 +40,45 @@ footer.colophon{margin-top:34px;padding:0 0 60px;font-family:var(--sans);font-si
 
   <header class="masthead">
     <div class="eyebrow">Engineering deep dive</div>
-    <h1>The AI owns the judgment. The harness earns the right to act.</h1>
-    <p class="dek">The engineering problem is not how to make a model sound certain. It is how to let an AI investigate a messy case, commit to a useful decision, and then prove that decision is safe enough for a machine to execute.</p>
+    <h1>The AI investigates and decides. The harness checks the evidence, limits the change, and confirms the result.</h1>
+    <p class="dek">The engineering problem is not making a model sound certain. It is letting the AI investigate a messy case, return an exact decision, and independently checking that decision before the machine changes anything.</p>
   </header>
 
   <article class="prose">
     <h2>A QA answer is useful only when the operation can act on it.</h2>
     <p>A free-form explanation is not a QA decision. It does not say which field may change, what value the system expects to find, which evidence supports the replacement, or what must happen after the edit. It also cannot protect itself from stale data, a duplicate instruction, or a write that only partly succeeds.</p>
-    <p>The worker solves those problems by separating two forms of authority. The AI has authority to interpret evidence and make the QA judgment. The harness has authority to decide whether that judgment may cause a write.</p>
+    <p>The worker separates judgment from execution. The AI interprets the evidence and makes the QA decision. Plain code checks whether the exact change is supported and allowed before anything can be written.</p>
     <p>The separation matters because each side is strong where the other is weak. The AI can connect context that ordinary rules cannot. Plain code can enforce boundaries that must never drift.</p>
   </article>
 
-  <section class="contract" aria-label="A synthetic employment case and the complete decision required to change it">
+  <section class="contract" aria-label="A synthetic employment case and the exact decision required to change it">
     <div class="case"><div class="k">Synthetic case</div><h3>The title differs; the dates and employer agree.</h3><p>The current result says “Operations Analyst.” Employer evidence supports “Business Operations Analyst.”</p></div>
-    <div class="decision"><div class="k">Complete decision</div><h3>Change one field, then complete QA.</h3><div class="fields"><div class="field"><b>Decision</b><span>change</span></div><div class="field"><b>Field</b><span>final_title</span></div><div class="field"><b>Expected value</b><span>Operations Analyst</span></div><div class="field"><b>Replacement</b><span>Business Operations Analyst</span></div><div class="field"><b>Evidence</b><span>employer receipt</span></div><div class="field"><b>QA action</b><span>complete QA</span></div></div></div>
+    <div class="decision"><div class="k">Exact decision</div><h3>Change one field, then complete QA.</h3><div class="fields"><div class="field"><b>Decision</b><span>change</span></div><div class="field"><b>Field</b><span>final_title</span></div><div class="field"><b>Expected value</b><span>Operations Analyst</span></div><div class="field"><b>Replacement</b><span>Business Operations Analyst</span></div><div class="field"><b>Evidence</b><span>employer receipt</span></div><div class="field"><b>QA action</b><span>complete QA</span></div></div></div>
   </section>
 
   <article class="prose">
-    <h2>The complete case is the first control.</h2>
-    <p>The model never begins from a warehouse row or a reviewer’s final answer. The worker assembles one current case containing only the facts needed to decide and execute QA: supplied and verified values, evidence, lifecycle state, rules, and the actions permitted for that product.</p>
+    <h2>The full case record is the first control.</h2>
+    <p>The model never begins from a warehouse row or a reviewer’s final answer. The worker assembles one current case containing only the facts needed to decide and execute QA: supplied and verified values, evidence, where the case stands, rules, and the actions permitted for that product.</p>
     <p>Historical reviewer outcomes may be used in offline evaluation, but they do not enter the live prompt. That prevents the model from copying the answer it is supposed to produce.</p>
   </article>
 
   <section class="pipeline" aria-label="Seven stages from a changed case to a confirmed result">
-    <div class="stage"><div class="n">01</div><h3>Claim the case<span>Scope before intelligence</span></h3><p>Take only supported case types and record the version being evaluated. Unsupported work remains in its ordinary source workflow.</p></div>
-    <div class="stage"><div class="n">02</div><h3>Assemble the record<span>One case, one truth surface</span></h3><p>Gather current facts, evidence, allowed actions, and the exact handbook rules that apply.</p></div>
-    <div class="stage"><div class="n">03</div><h3>Investigate<span>Read only, case bound, receipted</span></h3><p>Let the AI retrieve an approved missing decision fact without exposing another case or an open-ended search surface.</p></div>
-    <div class="stage"><div class="n">04</div><h3>Decide<span>Approve or exact change</span></h3><p>Require one structured business outcome with citations, rationale, and a complete action when a change is proposed.</p></div>
-    <div class="stage"><div class="n">05</div><h3>Verify<span>Rebuild what code can prove</span></h3><p>Check evidence ownership, rule validity, source freshness, field authority, action authority, and whether the proposed value follows from the record.</p></div>
-    <div class="stage"><div class="n">06</div><h3>Execute<span>Apply exactly once</span></h3><p>Write only a verified decision through the narrow destination contract, using the expected current value to guard against concurrent change.</p></div>
-    <div class="stage"><div class="n">07</div><h3>Read back<span>The destination is the final witness</span></h3><p>Read the case again, compare the actual result with the approved decision, and record the proof needed to explain the outcome later.</p></div>
+    <div class="stage"><div class="n">01</div><h3>Take the right work<span>Only supported case types enter</span></h3><p>Record the version being evaluated. Unsupported work remains in its ordinary source workflow.</p></div>
+    <div class="stage"><div class="n">02</div><h3>Build the case record<span>Facts, evidence, rules, and available actions</span></h3><p>Gather the current information and the exact handbook rules that apply.</p></div>
+    <div class="stage"><div class="n">03</div><h3>Investigate<span>Approved missing facts for this case only</span></h3><p>Let the AI retrieve a missing decision fact without exposing another case or an open-ended search.</p></div>
+    <div class="stage"><div class="n">04</div><h3>Decide<span>Approve or name the exact supported change</span></h3><p>Require one structured decision with citations, rationale, and the full change when an edit is proposed.</p></div>
+    <div class="stage"><div class="n">05</div><h3>Check<span>Evidence, current value, and allowed action</span></h3><p>Verify that the rule applies, the evidence belongs to this case, the source is current, and the proposed value follows from the record.</p></div>
+    <div class="stage"><div class="n">06</div><h3>Execute<span>Apply the verified decision once</span></h3><p>Write only the checked decision, using the expected current value to prevent an overwrite if the case changed underneath the AI.</p></div>
+    <div class="stage"><div class="n">07</div><h3>Read back<span>Confirm what actually changed</span></h3><p>Read the case again, compare the actual result with the approved decision, and record what happened.</p></div>
   </section>
 
   <article class="prose">
-    <h2>The model may investigate, but it may not improvise authority.</h2>
+    <h2>The model may investigate, but it cannot expand its own job.</h2>
     <p>A tool request names the missing fact, the reason it matters, and the current case. The tool either returns a case-bound fact with a receipt or refuses. The model cannot invent a new tool, request a write, broaden the case, or turn lookup exhaustion into approval.</p>
-    <p>The investigation budget expands only when a permitted lookup is still producing decision-relevant evidence. Exhaustion creates a non-actionable system state: no decision is silently converted into approval, and no write occurs.</p>
+    <p>The investigation budget expands only while a permitted lookup is producing decision-relevant evidence. If approved lookups still cannot establish the answer, the worker makes no decision and writes nothing.</p>
   </article>
 
-  <div class="codepanel"><div class="k">The decision is a contract, not a chat reply</div><pre>{
+  <div class="codepanel"><div class="k">The decision is structured, not a chat reply</div><pre>{
   "decision": <span class="good">"change"</span>,
   "reason": "Employer evidence supports the more specific title.",
   "change": {
@@ -92,61 +92,61 @@ footer.colophon{margin-top:34px;padding:0 0 60px;font-family:var(--sans);font-si
 
   <article class="prose">
     <h2>The verifier does not decide the case a second time.</h2>
-    <p>The AI handles equivalence, context, and interacting rules. The verifier handles hard truths that software can establish without interpretation. It asks whether the AI’s decision is internally coherent, supported, authorized, current, and safe.</p>
+    <p>The AI handles equivalence, context, and interacting rules. The verifier handles hard truths that software can establish without interpretation. It asks whether the AI’s decision is coherent, supported, current, and within the worker’s allowed actions.</p>
   </article>
 
   <section class="checks">
     <div class="check"><div class="k">Evidence</div><h3>Does every cited fact exist in this case?</h3><p>Invented receipts, cross-case references, and unsupported replacements stop the action.</p></div>
     <div class="check"><div class="k">Rules</div><h3>Does the handbook basis exist and apply?</h3><p>The AI cannot cite a rule that is absent, inactive, or outside the case’s product scope.</p></div>
     <div class="check"><div class="k">Freshness</div><h3>Is the source still the version the AI read?</h3><p>An expected current value prevents the worker from overwriting a newer human or machine change.</p></div>
-    <div class="check"><div class="k">Authority</div><h3>May this field and action be changed here?</h3><p>The destination accepts only approved fields, value forms, and QA actions.</p></div>
+    <div class="check"><div class="k">Allowed change</div><h3>May this field and QA action be changed here?</h3><p>The worker can use only approved fields, value forms, and QA actions.</p></div>
     <div class="check"><div class="k">Isolation</div><h3>Did every lookup and receipt stay inside one case?</h3><p>Case identity travels through the full investigation and verification chain.</p></div>
     <div class="check"><div class="k">Safety</div><h3>Would the write introduce forbidden or unsafe content?</h3><p>Unapproved free text and sensitive material cannot cross the write boundary.</p></div>
   </section>
 
   <article class="prose">
     <h2>Execution has two valid outcomes: confirmed action or zero writes.</h2>
-    <p>A verified decision is previewed against the current destination, applied once, and read back. The execution record includes the before value, intended change, destination response, and actual final state. Repeating the same instruction does not repeat the business effect.</p>
+    <p>A verified decision is previewed against the current case, applied once, and read back. The execution record includes the before value, intended change, system response, and actual final state. Repeating the same instruction does not apply the change again.</p>
   </article>
 
   <section class="branch">
-    <div class="path act"><div class="k">Confirmed action</div><h3>The destination matches the decision.</h3><p>The case is approved or changed, the required QA action is complete, and the audit history preserves what was proposed, checked, written, and read back.</p></div>
-    <div class="path hold"><div class="k">Zero writes</div><h3>The system cannot prove a safe completion.</h3><p>The case remains unchanged. Unrelated cases continue. A repaired dependency can wake the case automatically; a serious integrity failure stops later writes until recovery is proven.</p></div>
+    <div class="path act"><div class="k">Confirmed action</div><h3>Readback matches the decision.</h3><p>The case is approved or changed, the required QA action is finished, and the audit history preserves what was proposed, checked, written, and read back.</p></div>
+    <div class="path hold"><div class="k">Zero writes</div><h3>Independent checks cannot verify a supported action.</h3><p>The case remains unchanged. Unrelated cases continue. A repaired dependency can wake the case automatically; a serious integrity failure stops later writes until targeted checks confirm recovery.</p></div>
   </section>
 
   <article class="prose">
-    <h2>Stopping writes does not stop observation.</h2>
-    <p>The worker separates judgment from write authority. If a failed readback, broken isolation boundary, duplicate-effect risk, data-safety breach, or severe quality pattern appears, later writes stop immediately. The system may continue evaluating cases without changing them, which preserves evidence for diagnosis without increasing the impact.</p>
-    <p>Recoverable failures restart only after targeted checks show that the failure is gone and the destination again behaves as expected. A breach of the data boundary requires external security or platform authorization before write authority can return.</p>
+    <h2>A failure can stop changes without stopping evaluation.</h2>
+    <p>The worker can continue examining cases and recording what it would have done while leaving them unchanged. A failed readback, broken case boundary, duplicate-effect risk, data-safety breach, or severe quality pattern stops later writes immediately without erasing the evidence needed to diagnose the problem.</p>
+    <p>Recoverable failures restart only after targeted checks show that the failure is gone and the connected system again behaves as expected. A breach of the data boundary requires external security or platform approval before writes can resume.</p>
 
     <h2>Learning runs on a slower clock than the case.</h2>
   </article>
 
-  <section class="clock" aria-label="The live case loop completes immediately while a separate slower loop evaluates and monitors improvements before release">
-    <div class="clockrow"><div class="label">Case clock</div><p><b>New case → investigate → decide → verify → execute → read back.</b> The worker completes supported work without waiting for model improvement.</p></div>
+  <section class="clock" aria-label="The production case loop will finish immediately while a separate slower loop evaluates and monitors improvements before release">
+    <div class="clockrow"><div class="label">Case clock</div><p><b>New case → investigate → decide → verify → execute → read back.</b> In production, the worker will finish supported work without waiting for model improvement.</p></div>
     <div class="clockrow"><div class="label">Learning clock</div><p><b>Completed outcomes → offline comparison → controlled release → monitoring → retain or reverse.</b> New prompts, models, rules, and allowed actions must earn their place before changing live behavior.</p></div>
   </section>
 
   <article class="prose">
-    <p>A separate observer watches aggregate behavior, with special attention to false approvals, false changes, unresolved cases, lookup use, and shifts in the mix of work. It may stop write authority when a severe pattern appears. It cannot rewrite or reroute an individual case, so monitoring never becomes a second hidden decision-maker.</p>
+    <p>In production, a separate observer will watch aggregate behavior, with special attention to false approvals, false changes, unresolved cases, lookup use, and shifts in the mix of work. It will be able to stop further changes when a severe pattern appears. It will not rewrite or reroute an individual case, so monitoring will not become a second hidden decision-maker.</p>
 
-    <h2>The engineering is complete where the repository can prove it.</h2>
+    <h2>The core worker is built and tested. Production impact is not yet proven.</h2>
     <p>The full path has been tested against the cases that distinguish a demo from an operating worker: concurrent change, duplicate execution, partial failure, ambiguous readback, rollback and reconciliation, dependency repair, zero-write continuation, serious write stops, and evidence-based restart. Changes to rules and approved actions are tested against the cases they affect before they can become active.</p>
-    <p>The remaining boundary is external. Production activation still requires the exact destination contract, credentials, and written platform authorization. Until that connection is live, the implementation proves repository-owned behavior and containment—not production accuracy or operational impact.</p>
-    <p><strong>The result is not a model wrapped in enough warnings to be tolerated. It is an AI given a real job inside a system that can prove what the AI saw, what it decided, what the machine changed, and whether the destination agrees.</strong></p>
+    <p>The remaining work is the live production connection: the exact fields and actions the connected system accepts, the credentials required to use them, and written approval to make changes. Until that connection is active, the tests establish the worker’s behavior, controlled execution, and audit history—not production accuracy or operational impact.</p>
+    <p><strong>The result is not a model wrapped in warnings. It is an AI given a real job inside a system that proves its exact decision is supported before the machine acts—and confirms the result afterward.</strong></p>
   </article>
 
-  <aside class="note"><span class="kicker">Evidence boundary</span><p>The operating percentages and elapsed-time findings describe the prior human QA loop for education and employment verifications in the first half of 2026. The architecture claims describe the completed repository-owned worker and its tested controls. Live operation is required to establish production accuracy and operational impact.</p><p>No applicant data, internal source filenames, or raw case records appear in this article.</p></aside>
+  <aside class="note"><span class="kicker">Evidence boundary</span><p>The operating percentages and elapsed-time findings describe the prior human QA loop for education and employment verifications in the first half of 2026. The engineering claims describe the worker built and tested so far. Live operation is required to establish production accuracy and operational impact.</p><p>No applicant data, internal source filenames, or raw case records appear in this article.</p></aside>
 
   <nav class="series-nav" aria-label="Continue the AI QA Worker series">
     <div class="series-head"><span class="series-kicker">Continue the series</span><a class="series-home" href="https://awright101012.github.io/SNH-UBS-Verification-QA-site/">View all three pieces</a></div>
     <div class="series-links">
       <a class="series-link" href="exec-brief.html"><span class="number">01 · Executive briefing</span><strong>See why this work matters now</strong><span>The business problem, the operating opportunity, and the destination.</span></a>
-      <a class="series-link" href="concepts.html"><span class="number">02 · Illustrated tour</span><strong>Follow one case through the worker</strong><span>See the AI investigate, decide, prove, act, and confirm.</span></a>
+      <a class="series-link" href="concepts.html"><span class="number">02 · Illustrated tour</span><strong>Follow one case through the worker</strong><span>See the AI investigate, decide, verify, act, and confirm.</span></a>
     </div>
   </nav>
 
-  <footer class="colophon"><p><b>SNH Strategic Initiatives.</b> Engineering deep dive · July 2026.</p><p>This article explains the autonomous production path. Historical replay and model comparison remain offline release-validation tools; they do not enter the live case path.</p></footer>
+  <footer class="colophon"><p><b>SNH Strategic Initiatives.</b> Engineering deep dive · July 2026.</p><p>This article explains the worker’s production design. Historical replay and model comparison remain offline release-validation tools; they do not enter the production case path.</p></footer>
 </div>
 
 </body>
